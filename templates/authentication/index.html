@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+    body {
+      background-image: url('https://getwallpapers.com/wallpaper/full/1/e/7/1147652-large-molecule-wallpaper-2560x1600-images.jpg');
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+      position: absolute;
+      padding: 20px 40px;
+      background-color: rgba(255, 221, 221, 0.4);
+      border-radius: 15px;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+
+    h2 {
+      text-align: center;
+      color: rgba(237, 221, 221, 0.8);
+    }
+
+    .homepage-content {
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btn-container a {
+      width: 45%;
+      padding: 5px;
+      border-radius: 4px;
+      background-color: rgba(252, 225, 225, 0.2);;
+      color: #252525;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.4s;
+    }
+
+    .btn-container a:hover {
+      background-color: rgba(255, 161, 161, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show " role="alert">
+      <strong>Message:</strong>{{ message }}
+      <button type="button" class="close" date-dismiss="alert" aria-lable="close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    {% endfor %}
+    <h2>welcome to our website</h2>
+    {% if user.is_authenticated %}
+    <h3>Hello {{name}}</h3>
+    <h4>You are successfully logged in.</h4>
+    <button type="submit"><a href="signup.html">Signout</button>
+    <div class="homepage-content"></div>
+
+    
+    {% else %}
+    
+    </div>
+    <div class="btn-container">
+      <a href="signup.html">Sign Up</a>
+      <a href="signin.html">Sign In</a>
+      {% endif %}
+      <script src="" async defer></script>
+    </div>
+  </div>
+</body>
+</html>

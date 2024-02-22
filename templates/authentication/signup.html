@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+    body {
+      background-image: url('https://getwallpapers.com/wallpaper/full/1/e/7/1147652-large-molecule-wallpaper-2560x1600-images.jpg');
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+      
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 300px;
+        position: absolute;
+        padding: 20px 40px;
+        background-color: rgba(255, 221, 221, 0.4);
+        border-radius: 15px;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+        
+    }
+    a{
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+    a:hover {
+      color: #000000;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    input::placeholder{
+      color: rgba(255, 255, 255,0.6);
+    }
+
+    input {
+        width: 300px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 0px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 8px;
+        background-color: rgba(255, 236, 236, 0.2);
+
+    }
+
+    input[type="submit"] {
+        width: 25%;
+        background-color: #5483b3;
+        color: white;
+        padding: 10px 0px;
+        margin: 8px 0;
+        transform: translate(150%, 20%);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        border-radius: 4px;
+        
+    }
+
+    input[type="submit"]:hover {
+        background-color: #7da0ca;
+    }
+    input:focus {
+      outline: none; /* Remove the default outline style */
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter Username">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Choose a password">
+
+      <label for="repassword">re-Enter Password</label>
+      <input type="password" id="repassword" name="repassword" placeholder="Re-Enter Password">
+
+      <input type="submit" value="Sign Up">
+      <p>Already have an account? <a href="signin.html">Login here</a></p>
+    </form>
+  </div>
+    
+  
+</body>
+</html>

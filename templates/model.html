@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Macromolecule Type Prediction</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            background-color: rgba(255, 212, 212, 0.5);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.25);
+        }
+
+        input[type="submit"] {
+            background-color: rgba(25,25,25,0.9);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 2px 2px 4px rgba(25, 25, 25, 0.2);
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgba(33, 67, 234, 0.5);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("https://getwallpapers.com/wallpaper/full/1/e/7/1147652-large-molecule-wallpaper-2560x1600-images.jpg");
+            background-size: 100% 100%;
+            animation: gradient 15s infinite;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(210, 246, 250);
+            margin-top: 20px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .output{
+            background-color: rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #000000;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Macromolecule Type Prediction</h1>
+    <form action="" method="POST">
+        <input type="hidden" name="csrfmiddlewaretoken" value="2Yywhlu4ILLQwhsqEoBf8vb7jdi1uHqTQmTW8ZLwQX6bxgEcTcAcX24vm5TEp5eu"> 
+        <label for="sequence">Sequence:</label>
+        <input type="text" id="sequence" name="sequence" required>
+        <label for="residue_count">Residue Count:</label>
+        <input type="number" id="residue_count" name="residue_count" required>
+        
+        <!-- <input type="file" name="xmlFile" id="xmlFile" accept=".xml" required> -->
+
+        <input type="submit" value="Predict">
+        
+        <h2>MACROMOLECULAR-TYPE: [&#x27;Protein&#x27;]</h2>
+        
+    </form>
+    
+</body>
+</html>
